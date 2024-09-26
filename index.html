@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frankie Timer</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+    />
+    <script src="./script.js"></script>
+  </head>
+  <body>
+    <div class="section">
+      <div class="box has-text-centered">
+        <div class="title">Hi Frankie!</div>
+        <div class="subtitle">Here's how much you've earned so far today</div>
+        <div class="columns">
+          <div class="column">
+            <div id="startTime-container" class="field">
+              <div id="startTime-label" class="label">
+                What time did you start?
+              </div>
+              <div id="startTime-options" class="control">
+                <div class="buttons has-addons is-centered">
+                  <div id="startTime-option-0" class="button">09:00</div>
+                  <div id="startTime-option-1" class="button">09:30</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div id="hadLunch-container" class="field">
+              <div id="hadLunch-label" class="label">
+                Have you had lunch yet?
+              </div>
+              <div id="hadLunch-options" class="control">
+                <div class="buttons has-addons is-centered">
+                  <div id="hadLunch-option-0" class="button">Yes</div>
+                  <div id="hadLunch-option-1" class="button">No</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="notification is-primary has-text-centered">
+        <div class="is-size-3">You've earned:</div>
+        <div id="earnedAlready" class="is-size-1 has-text-weight-bold">
+          £0.00
+        </div>
+        <div class="is-size-3">so far today and will earn another</div>
+        <div id="yetToEarn" class="is-size-2">£0.00</div>
+        <div class="is-size-3">by the end of the day</div>
+      </div>
+    </div>
+  </body>
+</html>
