@@ -18,9 +18,9 @@ function update(){
     start.setMinutes(startTime[1]);
     start.setSeconds(0);
     start.setMilliseconds(0);
-    const lunchlessElapsed = now.getTime() - start.getTime();
+    const lunchlessElapsed = now.getTime() < start.getTime() ? 0 : now.getTime() - start.getTime();
     const elapsed = lunchlessElapsed + lunchOffset;
-    const hours = elapsed / (1000 * 60 * 60)
+    const hours = Math.min(elapsed / (1000 * 60 * 60), (37.5 / 5))
 
     const monthly = 1621.51;
     const yearly = monthly * 12;
